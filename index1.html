@@ -1,0 +1,1360 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karan Jadhav - AI Engineer & Data Scientist Portfolio</title>
+
+  <!--=====FAB ICON=======-->
+  <link rel="shortcut icon" href="assets\img\logo\logo1.jpeg" type="image/x-icon">
+
+  <!--===== CSS LINK =======-->
+  <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/plugins/aos.css">
+  <link rel="stylesheet" href="assets/css/plugins/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/plugins/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/plugins/mobile.css">
+  <link rel="stylesheet" href="assets/css/plugins/owlcarousel.min.css">
+  <link rel="stylesheet" href="assets/css/plugins/sidebar.css">
+  <link rel="stylesheet" href="assets/css/plugins/slick-slider.css">
+  <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- Custom animated gradient styles -->
+  <style>
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @keyframes glow {
+
+      0%,
+      100% {
+        box-shadow: 0 0 20px rgba(67, 233, 123, 0.3), 0 0 40px rgba(56, 249, 215, 0.1);
+      }
+
+      50% {
+        box-shadow: 0 0 30px rgba(67, 233, 123, 0.5), 0 0 60px rgba(56, 249, 215, 0.2);
+      }
+    }
+
+    .experience-card-animated {
+      background: linear-gradient(90deg, #43e97b 0%, #8bc34a 50%, #cddc39 100%);
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+
+    .experience-card-animated:hover {
+      background: linear-gradient(135deg, #cddc39, #ffeb3b, #ff9800, #f44336, #e91e63);
+      background-size: 300% 300%;
+      animation: gradientShift 2s ease infinite;
+      transform: translateY(-10px) scale(1.03);
+    }
+
+    .experience-card-animated:hover h5,
+    .experience-card-animated:hover p,
+    .experience-card-animated:hover li {
+      color: #000000 !important;
+      font-weight: 700 !important;
+    }
+
+    /* Base style for colored icons (Square with dark bg) */
+    img.colored-icon {
+      background-color: #1a1a1a;
+      padding: 10px;
+      border-radius: 12px !important;
+      width: 70px !important;
+      height: 70px !important;
+      object-fit: contain;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      filter: none !important;
+      /* Ensure always visible */
+      opacity: 1 !important;
+    }
+
+    /* Hover effect: ensure it stays visible and pops */
+    .skills-all-boxarea:hover .icons img.colored-icon {
+      filter: none !important;
+      opacity: 1 !important;
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+    }
+
+    /* REDUCE SPACING: Override default section padding */
+    /* REDUCE SPACING: Override default section padding */
+    .service1-section-area {
+      padding-top: 40px !important;
+      padding-bottom: 20px !important;
+      /* Slight bottom padding */
+    }
+
+    .skills-section-area {
+      padding-top: 30px !important;
+      /* Moderate top padding */
+      padding-bottom: 40px !important;
+      margin-top: 0px !important;
+      /* Remove negative margin */
+    }
+
+    .about-section-area,
+    .portfolio-section-area,
+    .contact-section-area {
+      padding-top: 40px !important;
+      padding-bottom: 40px !important;
+    }
+
+    /* Remove extra margins if any */
+    .service-header-area,
+    .skills-header-area {
+      margin-bottom: 30px !important;
+    }
+
+    /* Remove bottom margin from the last experience card */
+    .service1-section-area .row .col-lg-12 .experience-card-animated:last-child {
+      margin-bottom: 0 !important;
+    }
+
+    /* Remove default row margins */
+    .service1-section-area .row {
+      margin-bottom: 0 !important;
+    }
+
+    /* PROJECT SECTION STYLING */
+    /* Add border to project images */
+    .portfolio-box-area .images img {
+      border: 3px solid #43e97b !important;
+      /* Green theme border */
+      border-radius: 10px;
+      /* Optional: smooth corners */
+      box-shadow: 0 0 15px rgba(67, 233, 123, 0.4);
+      /* Glow effect */
+    }
+
+    /* Fix project title color for visibility */
+    /* Fix project title color for visibility */
+    /* Fix project title color for visibility */
+    .portfolio-box-area .content-area a {
+      background: rgba(0, 0, 0, 0.85);
+      /* Dark background for readability */
+      color: #43e97b !important;
+      /* Solid Bright Green text */
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid rgba(67, 233, 123, 0.2);
+      /* Subtle theme border */
+
+      /* Reset gradient text properties to ensure visibility */
+      -webkit-background-clip: unset;
+      -webkit-text-fill-color: unset;
+
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 5px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Ensure tags are visible too */
+    .portfolio-box-area .content-area h4 {
+      color: #cddc39 !important;
+      /* Yellow theme color for tags */
+    }
+
+    /* CERTIFICATIONS HEADER STYLING */
+    /* Match the H2 style of Projects */
+    #certifications h2 {
+      color: #ffffff !important;
+      font-weight: 700;
+      font-size: 50px;
+      /* Adjust size as needed */
+      text-transform: capitalize;
+    }
+
+    /* Style the 'Designer' span (Certificates/AI ML) */
+    #certifications .designer,
+    #portfolio .designer {
+      background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+
+    /* Style the background 'Marketer' text (Certificates/Projects) */
+    #certifications .marketer,
+    #portfolio .marketer {
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4) !important;
+      /* Stronger outline */
+      color: transparent !important;
+      opacity: 0.8 !important;
+      /* Much more visible */
+      display: block;
+      z-index: 0;
+      /* Ensure it stays behind */
+    }
+
+    /* Boost main H2 visibility */
+    #certifications h2,
+    #portfolio h2 {
+      text-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+      /* Strong shadow for contrast */
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Update .designer for Certifications to match 'AI/ML' outline style */
+    #certifications .designer {
+      -webkit-text-stroke: 1px #ffffff !important;
+      color: transparent !important;
+      background: none !important;
+      -webkit-background-clip: unset !important;
+      -webkit-text-fill-color: unset !important;
+    }
+
+    /* Hover animation for Certificate Cards */
+    #certifications .about-boxarea {
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+
+    #certifications .about-boxarea:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 10px 30px rgba(67, 233, 123, 0.3) !important;
+    }
+  </style>
+
+  <!--=====  JS SCRIPT LINK =======-->
+  <script src="assets/js/plugins/jquery-3-6-0.min.js"></script>
+  <script src="assets/js/plugins/waypoints.js"></script>
+</head>
+
+<body class="homepage1-body">
+  <!--===== PRELOADER STARTS =======-->
+  <div class="overlay flex cac vac preloader-parent">
+    <div>
+      <div class="loader preloader flex vac">
+        <svg width="200" height="200">
+          <circle class="background" cx="90" cy="90" r="80" transform="rotate(-90, 100, 90)" />
+          <circle class="outer" cx="90" cy="90" r="80" transform="rotate(-90, 100, 90)" />
+        </svg>
+        <span class="circle-background">
+        </span>
+        <span class="logo animated keyframe5 fade-in">
+          <img src="assets\img\logo\logo1.jpeg" alt="">
+        </span>
+      </div>
+    </div>
+  </div>
+  <!--===== PRELOADER ENDS =======-->
+
+  <!--===== PROGRESS STARTS=======-->
+  <div class="paginacontainer">
+    <div class="progress-wrap">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+  </div>
+  <!--===== PROGRESS ENDS=======-->
+
+  <div class="cursor"></div>
+  <!--===== MOBILE HEADER STARTS =======-->
+  <div class="mobile-header mobile-haeder1 d-block d-lg-none">
+    <div class="container-fluid">
+      <div class="col-12">
+        <div class="mobile-header-elements">
+          <div class="mobile-logo">
+            <a href="home.html"><img src="assets/img/logo/logo2.png" alt=""></a>
+          </div>
+          <div class="mobile-nav-icon dots-menu">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-sidebar mobile-sidebar1">
+    <div class="logosicon-area">
+      <div class="logos">
+        <img src="assets/img/logo/logo2.png" alt="">
+      </div>
+      <div class="menu-close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+    <div class="mobile-nav mobile-nav1">
+      <ul class="mobile-nav-list nav-list1">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+      </ul>
+      <div class="allmobilesection">
+        <div class="btn-area">
+          <a href="home.html" class="download-btn">Get Started</a>
+        </div>
+        <div class="single-footer">
+          <h3>Contact Info</h3>
+          <div class="footer4-contact-info">
+            <div class="contact-info-single">
+              <div class="contact-info-icon">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <div class="contact-info-text">
+                <a href="tel:+918262973414">+91 8262973414</a>
+              </div>
+            </div>
+            <div class="contact-info-single">
+              <div class="contact-info-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-info-text">
+                <a href="mailto:karanjadhav1771@gmail.com">karanjadhav1771@gmail.com</a>
+              </div>
+            </div>
+            <div class="space20"></div>
+            <div class="single-footer">
+              <h3>Our Location</h3>
+              <div class="contact-info-single">
+                <div class="contact-info-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="contact-info-text">
+                  <a href="#">Aurangabad, Maharashtra,<br> India</a>
+                </div>
+              </div>
+            </div>
+            <div class="space20"></div>
+            <div class="single-footer">
+              <h3>Social Links</h3>
+              <div class="social-links-mobile-menu">
+                <ul>
+                  <li><a href="https://www.linkedin.com/in/karan-jadhav-251a49325" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-linkedin-in"></i></a></li>
+                  <li><a href="https://github.com/Karan-Jadhav-11" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-github"></i></a></li>
+                  <li><a href="mailto:karanjadhav1771@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+                  <li><a href="tel:+918262973414"><i class="fa-solid fa-phone"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--===== MOBILE HEADER STARTS =======-->
+
+  <!--===== HEADER STARTS =======-->
+  <div class="header-section-area"
+    style="background-image: url(assets/img/bg/pagebg1.png); background-position: center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2">
+          <div class="sidebar-main">
+            <div class="sidebar-area" style="padding: 0 15px;">
+              <div class="logo">
+                <a href="#" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
+                  <img src="assets/img/icons/portfolio.svg" alt="" style="width: 24px; height: 24px;">
+                  <h2
+                    style="font-weight: 700; font-size: 24px; margin: 0; letter-spacing: 1px; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                    PORTFOLIO</h2>
+                </a>
+              </div>
+              <div id="list-example" class="list-group" style="margin-top: 95px;">
+                <a class="list-group-item list-group-item-action" href="#home" data-aos="fade-up"
+                  data-aos-duration="700">
+                  <img src="assets/img/icons/home.svg" alt="">
+                  Home
+                </a>
+                <a class="list-group-item list-group-item-action" href="#about" data-aos="fade-up"
+                  data-aos-duration="800">
+                  <img src="assets/img/icons/about.svg" alt="">
+                  About ME
+                </a>
+                <a class="list-group-item list-group-item-action" href="#experience" data-aos="fade-up"
+                  data-aos-duration="900">
+                  <img src="assets/img/icons/service.svg" alt="">
+                  Experience
+                </a>
+                <a class="list-group-item list-group-item-action" href="#skills" data-aos="fade-up"
+                  data-aos-duration="1000">
+                  <img src="assets/img/icons/skills.svg" alt="">
+                  Skills
+                </a>
+                <a class="list-group-item list-group-item-action" href="#portfolio" data-aos="fade-up"
+                  data-aos-duration="1100">
+                  <img src="assets/img/icons/star.svg" alt="" style="width: 28px; height: 32px;">
+                  Projects
+                </a>
+                <a class="list-group-item list-group-item-action" href="#certifications" data-aos="fade-up"
+                  data-aos-duration="1150" style="display: flex; align-items: center; gap: 10px; white-space: nowrap;">
+                  <img src="assets/img/icons/skills.svg" alt="">
+                  Certifications
+                </a>
+                <a class="list-group-item list-group-item-action" href="#contact" data-aos="fade-up"
+                  data-aos-duration="1200" style="margin-bottom: 20px;">
+                  <img src="assets/img/icons/contact.svg" alt="">
+                  Contact
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-10">
+          <div class="all-section-area">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true"
+                    class="scrollspy-example" tabindex="0">
+                    <div id="home">
+                      <div class="header-textarea">
+                        <div class="pbmit-heading-subheading">
+                          <h4 class="text-anime-style-3"><img src="assets/img/icons/hand1.svg" alt="">Hi I'm Karan
+                            Jadhav</h4>
+                          <h1 class="text-anime-style-3">AI Engineer & <span class="designer">Data</span></h1>
+                          <span class="marketer">Scientist
+                            <img src="assets/img/elements/elements1.png" alt="" class="elements1" data-aos="fade-left"
+                              data-aos-duration="800">
+                            <img src="assets/img/elements/elements1.png" alt="" class="elements2" data-aos="fade-right"
+                              data-aos-duration="1000">
+                            <img src="assets/img/elements/elements1.png" alt="" class="elements3" data-aos="fade-left"
+                              data-aos-duration="1100">
+                            <img src="assets/img/elements/elements1.png" alt="" class="elements4" data-aos="fade-right"
+                              data-aos-duration="1200">
+                          </span>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="pbmit-animation-style3">
+                              <div class="progress-one_leftbox">
+                                <img src="assets/img/elements/elements3.png" alt="" class="elements3 d-lg-block d-none">
+                                <img src="assets/img/bg/side-bg1.png" alt="" class="side-bg1">
+                                <img src="assets/img/bg/side-bg2.png" alt="" class="side-bg2">
+                                <img src="assets/img/all-images/header-img3.png" alt="" class="side-bg3">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="header-pera-area">
+                              <p data-aos="fade-up" data-aos-duration="900">AI/ML Engineer with strong hands-on
+                                experience in Machine Learning, Deep Learning, and Agentic AI systems. Currently
+                                building production-grade AI applications using FastAPI, LangGraph, LLMs, and scalable
+                                ML pipelines. Expert in translating business problems into deployable AI solutions.</p>
+                              <div class="btn-area" data-aos="fade-up" data-aos-duration="1200">
+                                <a href="assets/img/cv/Karan_Jadhav_AI_Engineer_2025.pdf" download="Karan_Jadhav_AI_Engineer_2025.pdf" class="download-btn"><img
+                                    src="assets/img/icons/download.svg" alt="">Download CV</a>
+                                <a href="https://www.youtube.com/watch?v=Y8XpQpW5OVY" class="play-btn popup-youtube">
+                                  <img src="assets/img/elements/elements2.png" alt="" class="elements4"><span><i
+                                      class="fa-solid fa-play"></i>></span>Play Video</a>
+                              </div>
+                              <div class="socila-links-area">
+                                <h5>Connect With Me On</h5>
+                                <ul>
+                                  <li data-aos="zoom-in" data-aos-duration="800"><a
+                                      href="https://www.linkedin.com/in/karan-jadhav-251a49325" target="_blank"
+                                      rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                  <li data-aos="zoom-in" data-aos-duration="900"><a
+                                      href="https://github.com/Karan-Jadhav-11" target="_blank" rel="noopener"><i
+                                        class="fa-brands fa-github"></i></a></li>
+                                  <li data-aos="zoom-in" data-aos-duration="1000"><a
+                                      href="mailto:karanjadhav1771@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                                  </li>
+                                  <li data-aos="zoom-in" data-aos-duration="700"><a href="tel:+918262973414"><i
+                                        class="fa-solid fa-phone"></i></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="about">
+                      <div class="about-section-area">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-lg-8 d-block d-md-none">
+                              <div class="about-textarea">
+                                <div class="pbmit-heading-subheading">
+                                  <h4 data-aos="fade-up" data-aos-duration="700"> <img src="assets/img/icons/star.svg"
+                                      alt="">About Me</h4>
+                                  <h2 class="text-anime-style-3">about AI <span class="designer">Engineer</span>
+                                  </h2>
+                                  <span class="marketer">& Data Scientist
+                                    <img src="assets/img/elements/elements1.png" alt="" class="elements1"
+                                      data-aos="fade-left" data-aos-duration="800">
+                                    <img src="assets/img/elements/elements1.png" alt="" class="elements2"
+                                      data-aos="fade-right" data-aos-duration="1000">
+                                    <img src="assets/img/elements/elements1.png" alt="" class="elements3"
+                                      data-aos="fade-left" data-aos-duration="1100">
+                                    <img src="assets/img/elements/elements1.png" alt="" class="elements4"
+                                      data-aos="fade-right" data-aos-duration="1200">
+                                  </span>
+                                </div>
+                                <div class="pera-content">
+                                  <p data-aos="fade-up" data-aos-duration="800">As an AI Engineer and Data Scientist, I
+                                    specialize in developing and deploying cutting-edge machine learning models. My
+                                    expertise spans deep learning, natural language processing, and generative AI,
+                                    transforming complex data into actionable insights and innovative solutions.</p>
+                                  <div class="list-area">
+                                    <ul data-aos="fade-up" data-aos-duration="900">
+                                      <li><img src="assets/img/icons/check.svg" alt="">Machine Learning</li>
+                                      <li><img src="assets/img/icons/check.svg" alt="">Deep Learning</li>
+                                    </ul>
+                                    <ul data-aos="fade-up" data-aos-duration="1000">
+                                      <li><img src="assets/img/icons/check.svg" alt="">Natural Language Processing</li>
+                                      <li><img src="assets/img/icons/check.svg" alt="">Generative AI</li>
+                                    </ul>
+                                  </div>
+                                  <div class="btn-area" data-aos="fade-up" data-aos-duration="1200">
+                                    <a href="mailto:karanjadhav1771@gmail.com"
+                                      class="download-btn text-anime-style-3">get
+                                      in touch now</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-4">
+                              <div class="about-boxareas">
+                                <div class="about-boxarea" data-aos="zoom-out" data-aos-duration="900">
+                                  <img src="assets/img/bg/polygin.png" alt="" class="polygin">
+                                  <img src="assets/img/bg/polygon-bg2.png" alt="" class="polygon2">
+                                  <div class="content">
+                                    <h2>3+</h2>
+                                    <p>Projects Completed</p>
+                                  </div>
+                                </div>
+                                <div class="about-boxarea box2"
+                                  style="background-image: url(assets/img/bg/polygon-bg2.png); background-position: center; background-repeat: no-repeat; background-size: contain;"
+                                  data-aos="zoom-out" data-aos-duration="1000">
+                                  <div class="content">
+                                    <h2>10+</h2>
+                                    <p>Tech Skills</p>
+                                  </div>
+                                </div>
+                                <div class="about-boxarea box3" data-aos="zoom-out" data-aos-duration="1200">
+                                  <img src="assets/img/bg/polygin.png" alt="" class="polygin">
+                                  <img src="assets/img/bg/polygon-bg2.png" alt="" class="polygon2">
+                                  <div class="content">
+                                    <h2>2</h2>
+                                    <p>Certifications</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-8 d-md-block d-none">
+                              <div class="about-textarea">
+                                <div class="pbmit-heading-subheading">
+                                  <h4 data-aos="fade-up" data-aos-duration="700"> <img src="assets/img/icons/star.svg"
+                                      alt="">About Me</h4>
+                                  <h2 class="text-anime-style-3">about AI <span class="designer">Engineer</span>
+                                  </h2>
+                                  <span class="marketer">& Data Scientist
+                                    <img src="assets/img/elements/elements1.png" alt="" class="elements1"
+                                      data-aos="fade-left" data-aos-duration="800">
+                                    <img src="assets/img/elements/elements1.png" alt="" class="elements2"
+                                      data-aos="fade-right" data-aos-duration="1000">
+                                    <img src="assets/img/elements/elements1.png" alt="" class="elements3"
+                                      data-aos="fade-left" data-aos-duration="1100">
+                                    <img src="assets/img/elements/elements1.png" alt="" class="elements4"
+                                      data-aos="fade-right" data-aos-duration="1200">
+                                  </span>
+                                </div>
+                                <div class="pera-content">
+                                  <p data-aos="fade-up" data-aos-duration="800">AI/ML Engineer with strong hands-on
+                                    experience in Machine Learning, Deep Learning, and Agentic AI systems. Currently
+                                    working as a Full-Time AI/ML Intern, building production-grade AI applications using
+                                    FastAPI, LangGraph, LLMs, and scalable ML pipelines. Proven ability to translate
+                                    business problems into deployable AI solutions.</p>
+                                  <div class="list-area">
+                                    <ul data-aos="fade-up" data-aos-duration="900">
+                                      <li><img src="assets/img/icons/check.svg" alt="">Machine Learning</li>
+                                      <li><img src="assets/img/icons/check.svg" alt="">Deep Learning</li>
+                                    </ul>
+                                    <ul data-aos="fade-up" data-aos-duration="1000">
+                                      <li><img src="assets/img/icons/check.svg" alt="">Agentic AI / LangGraph</li>
+                                      <li><img src="assets/img/icons/check.svg" alt="">LLMs / RAG</li>
+                                    </ul>
+                                  </div>
+                                  <div class="btn-area" data-aos="fade-up" data-aos-duration="1200">
+                                    <a href="mailto:karanjadhav1771@gmail.com"
+                                      class="download-btn text-anime-style-3">get
+                                      in touch now</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="experience">
+                      <div class="service1-section-area">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-lg-10">
+                              <div class="service-header-area">
+                                <div class="pbmit-heading-subheading">
+                                  <h4> <img src="assets/img/icons/star.svg" alt="">MY EXPERIENCE</h4>
+                                  <h2 class="text-anime-style-3">Professional Journey</h2>
+                                  <span class="designer text-anime-style-3">& Education</span>
+                                  <span class="marketer">Background
+                                    <img src="assets/img/elements/elements1.png" alt="" class="elements1"
+                                      data-aos="fade-left" data-aos-duration="800">
+                                    <img src="assets/img/elements/elements1.png" alt="" class="elements2"
+                                      data-aos="fade-right" data-aos-duration="1000">
+                                    <img src="assets/img/elements/elements1.png" alt="" class="elements3"
+                                      data-aos="fade-left" data-aos-duration="1100">
+                                    <img src="assets/img/elements/elements1.png" alt="" class="elements4"
+                                      data-aos="fade-right" data-aos-duration="1200">
+                                  </span>
+                                </div>
+                              </div>
+
+                              <!-- Experience Items -->
+                              <div class="row" style="margin-top: 40px;">
+                                <div class="col-lg-12">
+                                  <!-- AI/ML Intern - Nova Techset -->
+                                  <div class="about-boxarea experience-card-animated" data-aos="zoom-out"
+                                    data-aos-duration="800"
+                                    style="padding: 30px; border-radius: 15px; margin-bottom: 30px;">
+                                    <div class="content" style="color: white; font-weight: bold;">
+                                      <h3
+                                        style="color: #1a3a2f; font-style: italic; margin-bottom: 10px; font-weight: 800; font-size: 1.5em; background: #e0e0e0; padding: 5px 15px; border-radius: 30px; display: inline-block;">
+                                        AI/ML Intern</h3>
+                                      <h5 style="color: #c8e6c9; margin-bottom: 15px; font-weight: 600;">Nova Techset
+                                        Limited, Pune | Nov 2025 - Present
+                                      </h5>
+                                      <p style="color: #e8f5e9; margin-bottom: 10px; font-weight: 600;">Full Time</p>
+                                      <ul style="list-style: none; padding-left: 0; color: #e8f5e9; font-weight: 500;">
+                                        <li style="margin-bottom: 8px;"><img src="assets/img/icons/check.svg" alt=""
+                                            style="filter: brightness(0) invert(1); width: 16px; margin-right: 10px;">Architecting
+                                          multi-agent systems using LangGraph to automate complex workflows</li>
+                                        <li style="margin-bottom: 8px;"><img src="assets/img/icons/check.svg" alt=""
+                                            style="filter: brightness(0) invert(1); width: 16px; margin-right: 10px;">Developing
+                                          high-performance REST APIs using FastAPI for model deployment</li>
+                                        <li style="margin-bottom: 8px;"><img src="assets/img/icons/check.svg" alt=""
+                                            style="filter: brightness(0) invert(1); width: 16px; margin-right: 10px;">Implementing
+                                          Agentic AI solutions for data extraction and processing</li>
+                                        <li style="margin-bottom: 8px;"><img src="assets/img/icons/check.svg" alt=""
+                                            style="filter: brightness(0) invert(1); width: 16px; margin-right: 10px;">Working
+                                          on OCR + LLM architectures for document processing</li>
+                                        <li><img src="assets/img/icons/check.svg" alt=""
+                                            style="filter: brightness(0) invert(1); width: 16px; margin-right: 10px;"><strong>Tech
+                                            Stack:</strong> Python, FastAPI, LangGraph, LLMs, Agentic AI, SQL, Docker,
+                                          Git</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+
+                                  <!-- Data Analytics Intern - Trainity -->
+                                  <div class="about-boxarea experience-card-animated" data-aos="zoom-out"
+                                    data-aos-duration="900"
+                                    style="padding: 30px; border-radius: 15px; margin-bottom: 30px;">
+                                    <div class="content" style="color: white; font-weight: bold;">
+                                      <h3
+                                        style="color: #1a3a2f; font-style: italic; margin-bottom: 10px; font-weight: 800; font-size: 1.5em; background: #e0e0e0; padding: 5px 15px; border-radius: 30px; display: inline-block;">
+                                        Data Analytics Intern</h3>
+                                      <h5 style="color: #c8e6c9; margin-bottom: 15px; font-weight: 600;">Trainity | Aug
+                                        2024 - Oct 2024
+                                      </h5>
+                                      <p style="color: #e8f5e9; margin-bottom: 10px; font-weight: 600;">Virtual
+                                        Internship</p>
+                                      <ul style="list-style: none; padding-left: 0; color: #e8f5e9; font-weight: 500;">
+                                        <li style="margin-bottom: 8px;"><img src="assets/img/icons/check.svg" alt=""
+                                            style="filter: brightness(0) invert(1); width: 16px; margin-right: 10px;">Hands-on
+                                          experience in data wrangling, EDA, and statistical analysis</li>
+                                        <li style="margin-bottom: 8px;"><img src="assets/img/icons/check.svg" alt=""
+                                            style="filter: brightness(0) invert(1); width: 16px; margin-right: 10px;">Leveraged
+                                          SQL and Python for robust data manipulation</li>
+                                        <li style="margin-bottom: 8px;"><img src="assets/img/icons/check.svg" alt=""
+                                            style="filter: brightness(0) invert(1); width: 16px; margin-right: 10px;">Created
+                                          insightful dashboards and visualizations using Tableau and Power BI</li>
+                                        <li><img src="assets/img/icons/check.svg" alt=""
+                                            style="filter: brightness(0) invert(1); width: 16px; margin-right: 10px;">Delivered
+                                          actionable, data-driven reports supporting key business decisions</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+
+                                  <!-- Education -->
+                                  <div class="about-boxarea experience-card-animated" data-aos="zoom-out"
+                                    data-aos-duration="1100" style="padding: 30px; border-radius: 15px;">
+                                    <div class="content" style="color: white; font-weight: bold;">
+                                      <h3
+                                        style="color: #1a3a2f; font-style: italic; margin-bottom: 10px; font-weight: 800; font-size: 1.5em; background: #e0e0e0; padding: 5px 15px; border-radius: 30px; display: inline-block;">
+                                        Bachelor of Technology in
+                                        Computer
+                                        Science</h3>
+                                      <h5 style="color: #c8e6c9; margin-bottom: 15px; font-weight: 600;">Government
+                                        College of Engineering
+                                        Amravati | Dec 2021 - Jun 2025</h5>
+                                      <p style="color: #e8f5e9; margin-bottom: 10px; font-weight: 600;">
+                                        <strong>CGPA:</strong> 7.54 / 10
+                                      </p>
+                                      <p style="color: #e8f5e9; margin-bottom: 10px; font-weight: 600;">
+                                        <strong>Location:</strong>
+                                        Maharashtra, India
+                                      </p>
+                                      <ul style="list-style: none; padding-left: 0; color: #e8f5e9; font-weight: 500;">
+                                        <li style="margin-bottom: 8px;"><img src="assets/img/icons/check.svg" alt=""
+                                            style="filter: brightness(0) invert(1); width: 16px; margin-right: 10px;">Strong
+                                          foundation in computer science fundamentals</li>
+                                        <li style="margin-bottom: 8px;"><img src="assets/img/icons/check.svg" alt=""
+                                            style="filter: brightness(0) invert(1); width: 16px; margin-right: 10px;">Specialized
+                                          in TensorFlow & Keras and Data Science</li>
+                                        <li><img src="assets/img/icons/check.svg" alt=""
+                                            style="filter: brightness(0) invert(1); width: 16px; margin-right: 10px;">Completed
+                                          multiple ML/AI projects as part of curriculum</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+
+                                  <!-- Certifications -->
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div id="skills">
+                      <div class="skills-section-area">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-lg-10">
+                              <div class="skills-header-area" data-aos="fade-left" data-aos-duration="800">
+                                <div class="pbmit-heading-subheading">
+                                  <h4> <img src="assets/img/icons/star.svg" alt="">My Skills</h4>
+                                  <h2 class="text-anime-style-3">Technical <span class="designer">Skills &</span></h2>
+                                  <span class="marketer">Proficiency
+                                    <img src="assets/img/elements/elements1.png" alt="" class="elements1"
+                                      data-aos="fade-left" data-aos-duration="800">
+                                    <img src="assets/img/elements/elements1.png" alt="" class="elements2"
+                                      data-aos="fade-right" data-aos-duration="1000">
+                                    <img src="assets/img/elements/elements1.png" alt="" class="elements3"
+                                      data-aos="fade-left" data-aos-duration="1100">
+                                    <img src="assets/img/elements/elements1.png" alt="" class="elements4"
+                                      data-aos="fade-right" data-aos-duration="1200">
+                                  </span>
+                                </div>
+                              </div>
+
+                              <div class="all-boxes-area" data-aos="fade-left" data-aos-duration="1200">
+                                <div class="skils-auhtor-area">
+                                  <div class="skills-all-boxarea box1">
+                                    <div class="percent">
+                                      <p><span class="counter">95</span>%</p>
+                                    </div>
+                                    <img src="assets/img/bg/polygon5.png" alt="" class="polygon2">
+                                    <img src="assets/img/bg/polygon-bg4.png" alt="" class="polygon4">
+                                    <div class="content">
+                                      <div class="icons">
+                                        <img src="assets/img/icons/python_sql_cpp.png" alt="" class="colored-icon"
+                                          style="width: 50px;">
+                                      </div>
+                                      <p>Python, SQL & C++</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="skills-all-boxarea box2" data-aos="fade-left" data-aos-duration="1000">
+                                    <div class="percent">
+                                      <p><span class="counter">85</span>%</p>
+                                    </div>
+                                    <img src="assets/img/bg/polygon-bg4.png" alt="" class="polygon2">
+
+                                    <div class="content">
+                                      <div class="icons">
+                                        <img src="assets/img/icons/agentic_ai_langgraph.png" alt="" class="colored-icon"
+                                          style="width: 50px;">
+                                      </div>
+                                      <p>Agentic AI & LangGraph</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="skills-all-boxarea box3" data-aos="fade-right" data-aos-duration="800">
+                                    <div class="percent">
+                                      <p><span class="counter">90</span>%</p>
+                                    </div>
+                                    <img src="assets/img/bg/polygon5.png" alt="" class="polygon2">
+                                    <img src="assets/img/bg/polygon-bg4.png" alt="" class="polygon4">
+
+                                    <div class="content">
+                                      <div class="icons">
+                                        <img src="assets/img/icons/ml_dl.png" alt="" class="colored-icon"
+                                          style="width: 50px;">
+                                      </div>
+                                      <p>Machine Learning & Deep Learning</p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="skils-auhtor-area" data-aos="fade-right" data-aos-duration="1000">
+                                  <div class="skills-all-boxarea box4">
+                                    <div class="percent">
+                                      <p><span class="counter">85</span>%</p>
+                                    </div>
+                                    <img src="assets/img/bg/polygon5.png" alt="" class="polygon2">
+                                    <img src="assets/img/bg/polygon-bg4.png" alt="" class="polygon4">
+
+                                    <div class="content">
+                                      <div class="icons">
+                                        <img src="assets/img/icons/tf_keras_pytorch.png" alt="" class="colored-icon"
+                                          style="width: 50px;">
+                                      </div>
+                                      <p>TensorFlow, Keras & PyTorch</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="skills-all-boxarea box5" data-aos="fade-right" data-aos-duration="1200">
+                                    <div class="percent">
+                                      <p><span class="counter">80</span>%</p>
+                                    </div>
+                                    <img src="assets/img/bg/polygon5.png" alt="" class="polygon2">
+                                    <img src="assets/img/bg/polygon-bg4.png" alt="" class="polygon4">
+                                    <div class="content">
+                                      <div class="icons">
+                                        <img src="assets/img/icons/data_viz.png" alt="" class="colored-icon"
+                                          style="width: 50px;">
+                                      </div>
+                                      <p>Data Visualization & Analytics</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="skills-all-boxarea box6">
+                                    <div class="percent">
+                                      <p><span class="counter">75</span>%</p>
+                                    </div>
+                                    <img src="assets/img/bg/polygon5.png" alt="" class="polygon2">
+                                    <img src="assets/img/bg/polygon-bg4.png" alt="" class="polygon4">
+
+                                    <div class="content">
+                                      <div class="icons">
+                                        <img src="assets/img/icons/fastapi_flask_docker.png" alt="" class="colored-icon"
+                                          style="width: 50px;">
+                                      </div>
+                                      <p>FastAPI, Flask & Docker</p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- Third Row of Skills (3 hexagons) -->
+                                <div class="skils-auhtor-area" data-aos="fade-left" data-aos-duration="1100">
+                                  <div class="skills-all-boxarea box1">
+                                    <div class="percent">
+                                      <p><span class="counter">90</span>%</p>
+                                    </div>
+                                    <img src="assets/img/bg/polygon5.png" alt="" class="polygon2">
+                                    <img src="assets/img/bg/polygon-bg4.png" alt="" class="polygon4">
+                                    <div class="content">
+                                      <div class="icons">
+                                        <img src="assets/img/icons/langchain_rag.png" alt="" class="colored-icon"
+                                          style="width: 50px;">
+                                      </div>
+                                      <p>LangChain & RAG</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="skills-all-boxarea box2" data-aos="fade-left" data-aos-duration="1200">
+                                    <div class="percent">
+                                      <p><span class="counter">85</span>%</p>
+                                    </div>
+                                    <img src="assets/img/bg/polygon-bg4.png" alt="" class="polygon2">
+
+                                    <div class="content">
+                                      <div class="icons">
+                                        <img src="assets/img/icons/nlp_stats.png" alt="" class="colored-icon"
+                                          style="width: 50px;">
+                                      </div>
+                                      <p>NLP & Statistics</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="skills-all-boxarea box3" data-aos="fade-right" data-aos-duration="1300">
+                                    <div class="percent">
+                                      <p><span class="counter">80</span>%</p>
+                                    </div>
+                                    <img src="assets/img/bg/polygon5.png" alt="" class="polygon2">
+                                    <img src="assets/img/bg/polygon-bg4.png" alt="" class="polygon4">
+
+                                    <div class="content">
+                                      <div class="icons">
+                                        <img src="assets/img/icons/powerbi_tableau.png" alt="" class="colored-icon"
+                                          style="width: 50px;">
+                                      </div>
+                                      <p>Power BI & Tableau</p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- Fourth Row of Skills (3 hexagons) -->
+                                <div class="skils-auhtor-area" data-aos="fade-right" data-aos-duration="1200">
+                                  <div class="skills-all-boxarea box4">
+                                    <div class="percent">
+                                      <p><span class="counter">75</span>%</p>
+                                    </div>
+                                    <img src="assets/img/bg/polygon5.png" alt="" class="polygon2">
+                                    <img src="assets/img/bg/polygon-bg4.png" alt="" class="polygon4">
+
+                                    <div class="content">
+                                      <div class="icons">
+                                        <img src="assets/img/icons/aws_mongo.png" alt="" class="colored-icon"
+                                          style="width: 50px;">
+                                      </div>
+                                      <p>AWS & MongoDB</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="skills-all-boxarea box5" data-aos="fade-right" data-aos-duration="1300">
+                                    <div class="percent">
+                                      <p><span class="counter">80</span>%</p>
+                                    </div>
+                                    <img src="assets/img/bg/polygon5.png" alt="" class="polygon2">
+                                    <img src="assets/img/bg/polygon-bg4.png" alt="" class="polygon4">
+                                    <div class="content">
+                                      <div class="icons">
+                                        <img src="assets/img/icons/mysql_postgres.png" alt="" class="colored-icon"
+                                          style="width: 50px;">
+                                      </div>
+                                      <p>MySQL & PostgreSQL</p>
+                                    </div>
+                                  </div>
+
+                                  <div class="skills-all-boxarea box6">
+                                    <div class="percent">
+                                      <p><span class="counter">85</span>%</p>
+                                    </div>
+                                    <img src="assets/img/bg/polygon5.png" alt="" class="polygon2">
+                                    <img src="assets/img/bg/polygon-bg4.png" alt="" class="polygon4">
+
+                                    <div class="content">
+                                      <div class="icons">
+                                        <img src="assets/img/icons/git_agile.png" alt="" class="colored-icon"
+                                          style="width: 50px;">
+                                      </div>
+                                      <p>Git & Agile</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="portfolio">
+                      <div class="portfolio-section-area"
+                        style="padding: 150px 0; background-image: url(assets/img/bg/pagebg1.png); background-position: center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-lg-10">
+                              <div class="portfolio-header-area">
+                                <div class="pbmit-heading-subheading">
+                                  <h4> <img src="assets/img/icons/portfolio.svg" alt="">My Projects</h4>
+                                  <h2 class="text-anime-style-3">Projects of <span class="designer">AI/ML</span></h2>
+                                  <span class="marketer">Projects
+                                    <img src="assets/img/elements/elements1.png" alt="" class="elements1"
+                                      data-aos="fade-left" data-aos-duration="800">
+                                    <img src="assets/img/elements/elements1.png" alt="" class="elements2"
+                                      data-aos="fade-right" data-aos-duration="1000">
+                                    <img src="assets/img/elements/elements1.png" alt="" class="elements3"
+                                      data-aos="fade-left" data-aos-duration="1100">
+                                    <img src="assets/img/elements/elements1.png" alt="" class="elements4"
+                                      data-aos="fade-right" data-aos-duration="1200">
+                                  </span>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                  <div class="portfolio-box-area">
+                                    <div class="images" data-aos="zoom-in" data-aos-duration="1000">
+                                      <img src="assets/img/all-images/project-object-classification-v2.png" alt="">
+                                    </div>
+                                    <div class="content-area" data-aos="flip-right" data-aos-duration="1000">
+                                      <h4>#Deep Learning</h4>
+                                      <a href="https://github.com/Karan-Jadhav-11/Mammals_Image_Classification_Using_Deep_Learning"
+                                        target="_blank">Object Classification System: 92%+ accuracy
+                                        classifying 47 animal species</a>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6">
+                                  <div class="portfolio-box-area box2">
+                                    <div class="images" data-aos="zoom-in" data-aos-duration="1000">
+                                      <img src="assets/img/all-images/project-diabetes-prediction-v2.png" alt="">
+                                    </div>
+                                    <div class="content-area" data-aos="flip-right" data-aos-duration="1000">
+                                      <h4>#Predictive Analytics</h4>
+                                      <a href="https://github.com/Karan-Jadhav-11/Diabetes-Patient-Classification"
+                                        target="_blank">Diabetes Patient Classification: 99%+ precision,
+                                        87%+ accuracy with ML</a>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6">
+                                  <div class="portfolio-box-area box3">
+                                    <div class="images" data-aos="zoom-in" data-aos-duration="1000">
+                                      <img src="assets/img/all-images/project-diamond-price-v2.png" alt="">
+                                    </div>
+                                    <div class="content-area" data-aos="flip-right" data-aos-duration="1000">
+                                      <h4>#Machine Learning</h4>
+                                      <a href="https://github.com/Karan-Jadhav-11/DaimondPricePrediction"
+                                        target="_blank">Diamond Price Prediction: End-to-end ML pipeline
+                                        with Flask API deployment</a>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6">
+                                  <div class="portfolio-box-area box4">
+                                    <div class="images" data-aos="zoom-in" data-aos-duration="1000">
+                                      <img src="assets/img/all-images/project-trainity.png" alt="">
+                                    </div>
+                                    <div class="content-area" data-aos="flip-right" data-aos-duration="1000">
+                                      <h4>#Data Analytics</h4>
+                                      <a href="https://drive.google.com/file/d/1DeD23ZYfmn8hzz2Qvt3AhvlliQYdgcn-/view?usp=sharing"
+                                        target="_blank">Trainity Internship: Data wrangling, EDA &
+                                        visualization using SQL, Python, Tableau</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="certifications">
+                      <!-- Added theme background to match Projects section -->
+                      <div class="about-section-area"
+                        style="padding: 150px 0; background-image: url(assets/img/bg/pagebg1.png); background-position: center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-lg-10">
+                              <div class="pbmit-heading-subheading" style="margin-bottom: 50px;">
+                                <h4 data-aos="fade-up" data-aos-duration="700"> <img src="assets/img/icons/star.svg"
+                                    alt="">My Certifications</h4>
+                                <h2 class="text-anime-style-3" data-aos="fade-up" data-aos-duration="800">Professional
+                                  <span class="designer">Certificates</span>
+                                </h2>
+                                <span class="marketer">Certificates
+                                  <img src="assets/img/elements/elements1.png" alt="" class="elements1"
+                                    data-aos="fade-left" data-aos-duration="800">
+                                  <img src="assets/img/elements/elements1.png" alt="" class="elements2"
+                                    data-aos="fade-right" data-aos-duration="1000">
+                                  <img src="assets/img/elements/elements1.png" alt="" class="elements3"
+                                    data-aos="fade-left" data-aos-duration="1100">
+                                  <img src="assets/img/elements/elements1.png" alt="" class="elements4"
+                                    data-aos="fade-right" data-aos-duration="1200">
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-6">
+                              <a href="https://drive.google.com/file/d/1PYa8cVJAyUzqUGYPfcVIYvJiPzc87GQQ/view"
+                                target="_blank" rel="noopener" style="text-decoration: none;">
+                                <div class="about-boxarea box2" data-aos="zoom-out" data-aos-duration="1000"
+                                  style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); padding: 25px; text-align: center; border-radius: 15px; margin-bottom: 30px;">
+                                  <div class="content">
+                                    <h4 style="color: white;">Data Science Master</h4>
+                                    <p style="color: #f0fdf4;">By Physics Wallah</p>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                            <div class="col-lg-6">
+                              <a href="https://drive.google.com/file/d/1sxPPGeDI9cfHl93KA_WrawF3Gj5fScab/view"
+                                target="_blank" rel="noopener" style="text-decoration: none;">
+                                <div class="about-boxarea box2" data-aos="zoom-out" data-aos-duration="1200"
+                                  style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 25px; text-align: center; border-radius: 15px; margin-bottom: 30px;">
+                                  <div class="content">
+                                    <h4 style="color: white;">Data Analytics Training</h4>
+                                    <p style="color: #fff5f5;">By Trainity</p>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="contact">
+                      <div class="contact-section-area">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="contact-header-area">
+                                <div class="row">
+                                  <div class="col-lg-8 d-lg-none d-block">
+                                    <div class="contact-text-area">
+                                      <div class="pbmit-heading-subheading">
+                                        <h4> <img src="assets/img/icons/star.svg" alt="">contact me</h4>
+                                        <h2 class="text-anime-style-3">get in <span class="designer">touch</span></h2>
+                                        <span class="marketer">today
+                                          <img src="assets/img/elements/elements1.png" alt="" class="elements1"
+                                            data-aos="fade-left" data-aos-duration="800">
+                                          <img src="assets/img/elements/elements1.png" alt="" class="elements2"
+                                            data-aos="fade-right" data-aos-duration="1000">
+                                          <img src="assets/img/elements/elements1.png" alt="" class="elements3"
+                                            data-aos="fade-left" data-aos-duration="1100">
+                                          <img src="assets/img/elements/elements1.png" alt="" class="elements4"
+                                            data-aos="fade-right" data-aos-duration="1200">
+                                        </span>
+                                      </div>
+                                      <p data-aos="fade-up" data-aos-duration="800">I believe in building intelligent
+                                        solutions that not only solve complex problems but also drive meaningful impact.
+                                        Let's collaborate to turn innovative ideas into reality.</p>
+                                      <div class="contact-info-area">
+                                        <div class="info-boxarea" data-aos="zoom-out" data-aos-duration="1000">
+                                          <div class="icons">
+                                            <img src="assets/img/icons/phone.svg" alt="">
+                                          </div>
+                                          <div class="content">
+                                            <h5>CALL</h5>
+                                            <a href="tel:+918262973414">+91 8262973414</a>
+                                          </div>
+                                        </div>
+
+                                        <div class="info-boxarea" data-aos="fade-up" data-aos-duration="1100">
+                                          <div class="icons">
+                                            <img src="assets/img/icons/email.svg" alt="">
+                                          </div>
+                                          <div class="content">
+                                            <h5>Email</h5>
+                                            <a href="mailto:karanjadhav1771@gmail.com">karanjadhav1771@gmail.com</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="btn-area" data-aos="fade-up" data-aos-duration="1200">
+                                        <a href="assets/img/cv/Karan_Jadhav_AI_Engineer_2025.pdf" download="Karan_Jadhav_AI_Engineer_2025.pdf" class="download-btn"><img
+                                            src="assets/img/icons/download.svg" alt="">Download CV</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4">
+                                    <div class="contact-from-area" data-aos="flip-right" data-aos-duration="1000">
+                                      <h3 class="text-anime-style-3">Leave A Message</h3>
+                                      <form action="https://api.web3forms.com/submit" method="POST">
+                                        <input type="hidden" name="access_key"
+                                          value="9c264635-7ade-4763-9e29-c79a5250c196">
+
+                                        <div class="input">
+                                          <input type="text" name="name" placeholder="Full Name" required>
+                                        </div>
+                                        <div class="input">
+                                          <input type="number" name="phone" placeholder="Phone Number" required>
+                                        </div>
+                                        <div class="input">
+                                          <input type="email" name="email" placeholder="Email Address" required>
+                                        </div>
+
+                                        <div class="input">
+                                          <textarea name="message" placeholder="Message" required></textarea>
+                                        </div>
+                                        <div class="btn-area text-end" data-aos="fade-up" data-aos-duration="1200">
+                                          <button type="submit" class="download-btn">submit now</button>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-8 d-lg-block d-none">
+                                    <div class="contact-text-area">
+                                      <div class="pbmit-heading-subheading">
+                                        <h4> <img src="assets/img/icons/star.svg" alt="">contact me</h4>
+                                        <h2 class="text-anime-style-3">get in <span class="designer">touch</span></h2>
+                                        <span class="marketer">today
+                                          <img src="assets/img/elements/elements1.png" alt="" class="elements1"
+                                            data-aos="fade-left" data-aos-duration="800">
+                                          <img src="assets/img/elements/elements1.png" alt="" class="elements2"
+                                            data-aos="fade-right" data-aos-duration="1000">
+                                          <img src="assets/img/elements/elements1.png" alt="" class="elements3"
+                                            data-aos="fade-left" data-aos-duration="1100">
+                                          <img src="assets/img/elements/elements1.png" alt="" class="elements4"
+                                            data-aos="fade-right" data-aos-duration="1200">
+                                        </span>
+                                      </div>
+                                      <p data-aos="fade-up" data-aos-duration="800">I believe in building intelligent
+                                        solutions that not only solve complex problems but also drive meaningful impact.
+                                        Let's collaborate to turn innovative ideas into reality.</p>
+                                      <div class="contact-info-area">
+                                        <div class="info-boxarea" data-aos="zoom-out" data-aos-duration="1000">
+                                          <div class="icons">
+                                            <img src="assets/img/icons/phone.svg" alt="">
+                                          </div>
+                                          <div class="content">
+                                            <h5>CALL</h5>
+                                            <a href="tel:+918262973414">+91 8262973414</a>
+                                          </div>
+                                        </div>
+
+                                        <div class="info-boxarea" data-aos="fade-up" data-aos-duration="1100">
+                                          <div class="icons">
+                                            <img src="assets/img/icons/email.svg" alt="">
+                                          </div>
+                                          <div class="content">
+                                            <h5>Email</h5>
+                                            <a href="mailto:karanjadhav1771@gmail.com">karanjadhav1771@gmail.com</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="btn-area" data-aos="fade-up" data-aos-duration="1200">
+                                        <a href="assets/img/cv/Karan_Jadhav_AI_Engineer_2025.pdf" download="Karan_Jadhav_AI_Engineer_2025.pdf" class="download-btn"><img
+                                            src="assets/img/icons/download.svg" alt="">Download CV</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- Footer removed as requested -->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--===== SIDEBAR STARTS=======-->
+                  <div class="custom-model-main">
+                    <div class="custom-model-inner">
+                      <div class="close-btn">Ã—</div>
+                      <div class="custom-model-wrap">
+                        <div class="pop-up-content-wrap">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="opend-section">
+                                <div class="row">
+                                  <div class="col-lg-7">
+                                    <div class="boxes-area">
+                                      <div class="img1">
+                                        <img src="assets/img/all-images/blog-img1.png" alt="">
+                                      </div>
+                                      <div class="content">
+                                        <div class="tags-area">
+                                          <a href="#"><img src="assets/img/icons/calender.svg" alt="">23 April 2024</a>
+                                          <a href="#"><img src="assets/img/icons/user.svg" alt="">Karan Jadhav</a>
+                                        </div>
+                                        <a href="#">Building Production-Ready AI: Mastering Agentic Systems and Scalable
+                                          Pipelines</a>
+                                        <p>In the evolving field of AI, productionizing large language models requires
+                                          more than just a prompt. It involves building robust agentic frameworks using
+                                          tools like LangGraph and FastAPI to handle complex, multi-step workflows with
+                                          high reliability.</p>
+                                        <p class="pera">By leveraging multi-agent architectures, we can automate
+                                          intricate business processes, from automated data extraction to autonomous
+                                          research systems, ensuring scalable and deployable AI solutions.
+                                        </p>
+                                        <div class="social-area">
+                                          <div class="email">
+                                            <a href="#">#AI #AgenticAI #LangGraph</a>
+                                          </div>
+                                          <div class="icons">
+                                            <h5>share:</h5>
+                                            <ul>
+                                              <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                              <li><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
+                                              <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                              <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-lg-5">
+                                    <div class="contact-from-area" data-aos="flip-right" data-aos-duration="1000">
+                                      <h3>Leave A Message</h3>
+                                      <form action="https://api.web3forms.com/submit" method="POST">
+                                        <input type="hidden" name="access_key"
+                                          value="0cdd32fff-eda2-4da3-be43-37d47fbb396b">
+
+                                        <div class="input">
+                                          <input type="text" placeholder="Full Name">
+                                        </div>
+                                        <div class="input">
+                                          <input type="number" placeholder="Phone Number" required>
+                                        </div>
+                                        <div class="input">
+                                          <input type="email" placeholder="Email Address" required>
+                                        </div>
+                                        <div class="input">
+                                          <select name="country" id="country" class="country-area nice-select6">
+                                            <option value="1" data-display="Service Type">Service Type</option>
+                                            <option value="">AI Consulting</option>
+                                            <option value="">LLM Integration</option>
+                                            <option value="">Computer Vision</option>
+                                            <option value="">Data Analytics</option>
+                                            <option value="">MLOps Pipeline</option>
+                                          </select>
+                                        </div>
+                                        <div class="input">
+                                          <textarea placeholder="Message" required></textarea>
+                                        </div>
+                                        <div class="btn-area text-end" data-aos="fade-up" data-aos-duration="1200">
+                                          <button type="submit" class="download-btn">submit now</button>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-overlay"></div>
+                  </div>
+                  <!--===== SIDEBAR ENDS STARTS=======-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--===== HEADER ENDS=======-->
+
+  <!--===== JS SCRIPT LINK =======-->
+  <script src="assets/js/plugins/bootstrap.min.js"></script>
+  <script src="assets/js/plugins/fontawesome.js"></script>
+  <script src="assets/js/plugins/aos.js"></script>
+  <script src="assets/js/plugins/counter.js"></script>
+  <script src="assets/js/plugins/gsap.min.js"></script>
+  <script src="assets/js/plugins/ScrollTrigger.min.js"></script>
+  <script src="assets/js/plugins/Splitetext.js"></script>
+  <script src="assets/js/plugins/sidebar.js"></script>
+  <script src="assets/js/plugins/magnific-popup.js"></script>
+  <script src="assets/js/plugins/mobilemenu.js"></script>
+  <script src="assets/js/plugins/owlcarousel.min.js"></script>
+  <script src="assets/js/plugins/nice-select.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
+
+

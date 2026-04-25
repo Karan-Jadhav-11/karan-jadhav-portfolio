@@ -1,0 +1,704 @@
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(67, 233, 123, 0.3), 0 0 40px rgba(56, 249, 215, 0.1);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(67, 233, 123, 0.5), 0 0 60px rgba(56, 249, 215, 0.2);
+    }
+}
+
+/* ===== EXPERIENCE CARDS – Professional Dark Theme ===== */
+.experience-card-animated {
+    background: rgba(13, 26, 15, 0.85);
+    border: 1px solid rgba(67, 233, 123, 0.18);
+    border-left: 4px solid #43e97b;
+    border-radius: 16px !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5), 0 0 0 0 rgba(67, 233, 123, 0);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle top shine line */
+.experience-card-animated::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(67, 233, 123, 0.5), transparent);
+    pointer-events: none;
+}
+
+.experience-card-animated:hover {
+    transform: translateY(-6px);
+    border-left: 4px solid #38f9d7;
+    box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.6),
+        0 0 20px rgba(67, 233, 123, 0.15),
+        0 0 60px rgba(67, 233, 123, 0.07);
+    background: rgba(16, 32, 18, 0.92);
+    /* Set a base text color so child elements don't go dim */
+    color: #e0e0e0;
+}
+
+/* Keep all text colors explicitly on hover — prevent any dimming */
+.experience-card-animated:hover h3 {
+    opacity: 1 !important;
+}
+
+.experience-card-animated:hover h5 {
+    color: #a5d6a7 !important;
+    opacity: 1 !important;
+}
+
+.experience-card-animated:hover p,
+.experience-card-animated:hover li {
+    opacity: 1 !important;
+    color: #cfd8dc !important;
+}
+
+/* Keep accent-colored text unchanged on hover */
+.experience-card-animated:hover p[style*="#43e97b"],
+.experience-card-animated:hover p[style*="#38f9d7"] {
+    color: inherit !important;
+}
+
+/* Base style for colored icons (Square with dark bg) */
+img.colored-icon {
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 12px !important;
+    width: 70px !important;
+    height: 70px !important;
+    object-fit: contain;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    filter: none !important;
+    /* Ensure always visible */
+    opacity: 1 !important;
+}
+
+/* Hover effect: ensure it stays visible and pops */
+.skills-all-boxarea:hover .icons img.colored-icon {
+    filter: none !important;
+    opacity: 1 !important;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* REDUCE SPACING: Override default section padding */
+/* REDUCE SPACING: Override default section padding */
+.service1-section-area {
+    padding-top: 40px !important;
+    padding-bottom: 20px !important;
+    /* Slight bottom padding */
+}
+
+.skills-section-area {
+    padding-top: 30px !important;
+    /* Moderate top padding */
+    padding-bottom: 40px !important;
+    margin-top: 0px !important;
+    /* Remove negative margin */
+}
+
+.about-section-area,
+.portfolio-section-area,
+.contact-section-area {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+}
+
+/* Remove extra margins if any */
+.service-header-area,
+.skills-header-area {
+    margin-bottom: 30px !important;
+}
+
+/* Remove bottom margin from the last experience card */
+.service1-section-area .row .col-lg-12 .experience-card-animated:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Remove default row margins */
+.service1-section-area .row {
+    margin-bottom: 0 !important;
+}
+
+/* =====================================================
+   UNIFIED SECTION HEADINGS — Matches Contact Template
+   Scoped ONLY to inner pages: Experience, Projects, Certs
+   ===================================================== */
+
+/* Small green label above h2 */
+#experience .pbmit-heading-subheading h4,
+#portfolio .pbmit-heading-subheading h4,
+#certifications .pbmit-heading-subheading h4 {
+    color: #43e97b !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    text-shadow: 0 0 14px rgba(67, 233, 123, 0.55) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-bottom: 14px !important;
+}
+
+/* Green tint on icon inside h4 */
+#experience .pbmit-heading-subheading h4 img,
+#portfolio .pbmit-heading-subheading h4 img,
+#certifications .pbmit-heading-subheading h4 img {
+    filter: brightness(0) saturate(100%) invert(65%) sepia(80%) saturate(450%) hue-rotate(100deg) !important;
+    width: 18px !important;
+    height: 18px !important;
+}
+
+/* Large bold white h2 */
+#experience .pbmit-heading-subheading h2.text-anime-style-3,
+#portfolio .pbmit-heading-subheading h2.text-anime-style-3,
+#certifications .pbmit-heading-subheading h2.text-anime-style-3 {
+    color: #ffffff !important;
+    font-size: 3rem !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.8) !important;
+    margin-bottom: 0 !important;
+}
+
+/* Green gradient accent word */
+#experience .pbmit-heading-subheading h2 .designer,
+#portfolio .pbmit-heading-subheading h2 .designer,
+#certifications .pbmit-heading-subheading h2 .designer {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font-weight: 800 !important;
+    font-style: italic !important;
+}
+
+/* Ghost outline marketer text — scoped only to inner pages */
+#experience .pbmit-heading-subheading .marketer,
+#portfolio .pbmit-heading-subheading .marketer,
+#certifications .pbmit-heading-subheading .marketer {
+    -webkit-text-stroke: 1.5px rgba(67, 233, 123, 0.3) !important;
+    color: transparent !important;
+    opacity: 0.55 !important;
+    font-size: 3.8rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    display: block !important;
+    z-index: 0 !important;
+    line-height: 1 !important;
+    letter-spacing: 2px !important;
+}
+
+/* PROJECT SECTION STYLING */
+/* Add border to project images */
+.portfolio-box-area .images img {
+    border: 3px solid #43e97b !important;
+    /* Green theme border */
+    border-radius: 10px;
+    /* Optional: smooth corners */
+    box-shadow: 0 0 15px rgba(67, 233, 123, 0.4);
+    /* Glow effect */
+}
+
+/* Fix project title color for visibility */
+/* Fix project title color for visibility */
+/* Fix project title color for visibility */
+.portfolio-box-area .content-area a {
+    background: rgba(0, 0, 0, 0.85);
+    /* Dark background for readability */
+    color: #43e97b !important;
+    /* Solid Bright Green text */
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(67, 233, 123, 0.2);
+    /* Subtle theme border */
+
+    /* Reset gradient text properties to ensure visibility */
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure tags are visible too */
+.portfolio-box-area .content-area h4 {
+    color: #cddc39 !important;
+    /* Yellow theme color for tags */
+}
+
+/* ===== PROJECTS PAGE — Heading Vibrancy ===== */
+#portfolio h4,
+#portfolio .pbmit-heading-subheading h4 {
+    color: #43e97b !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    text-shadow: 0 0 12px rgba(67, 233, 123, 0.5) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+#portfolio h4 img {
+    filter: brightness(0) saturate(100%) invert(72%) sepia(60%) saturate(400%) hue-rotate(95deg) !important;
+    width: 20px !important;
+}
+
+#portfolio h2,
+#portfolio .pbmit-heading-subheading h2 {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    font-size: 2.8rem !important;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8) !important;
+    line-height: 1.2 !important;
+}
+
+#portfolio h2 .designer {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font-weight: 800 !important;
+}
+
+#portfolio .marketer {
+    -webkit-text-stroke: 1.5px rgba(67, 233, 123, 0.35) !important;
+    color: transparent !important;
+    opacity: 0.6 !important;
+    font-size: 3.5rem !important;
+    display: block;
+    z-index: 0;
+}
+
+
+/* CERTIFICATIONS HEADER STYLING */
+/* Match the H2 style of Projects */
+#certifications h2 {
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 50px;
+    /* Adjust size as needed */
+    text-transform: capitalize;
+}
+
+/* Style the 'Designer' span (Certificates/AI ML) */
+#certifications .designer,
+#portfolio .designer {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+/* Style the background 'Marketer' text (Certificates/Projects) */
+#certifications .marketer,
+#portfolio .marketer {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4) !important;
+    /* Stronger outline */
+    color: transparent !important;
+    opacity: 0.8 !important;
+    /* Much more visible */
+    display: block;
+    z-index: 0;
+    /* Ensure it stays behind */
+}
+
+/* Boost main H2 visibility */
+#certifications h2,
+#portfolio h2 {
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    /* Strong shadow for contrast */
+    position: relative;
+    z-index: 1;
+}
+
+/* Update .designer for Certifications to match 'AI/ML' outline style */
+#certifications .designer {
+    -webkit-text-stroke: 1px #ffffff !important;
+    color: transparent !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: unset !important;
+}
+
+/* Hover animation for Certificate Cards */
+#certifications .about-boxarea {
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+#certifications .about-boxarea:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(67, 233, 123, 0.3) !important;
+}
+
+/* Fix for Contact Icons */
+.socila-links-area {
+    margin-top: 30px;
+}
+
+.socila-links-area h5 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.socila-links-area ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.socila-links-area ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #1a1a1a;
+    /* Dark background */
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.socila-links-area ul li a:hover {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    transform: translateY(-5px);
+    color: #000;
+}
+
+/* Hero Image - Proper positioning within circular frame */
+.homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox .side-bg3 {
+    position: absolute !important;
+    top: 41% !important;
+    left: 51% !important;
+    transform: translate(-55%, -38%) !important;
+    width: 92% !important;
+    height: 99% !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    border-radius: 50% !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure the container doesn't overflow */
+.pbmit-animation-style3 {
+    position: relative;
+    width: 100%;
+}
+
+.progress-one_leftbox {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+/* Prevent text overlap */
+.header-pera-area {
+    padding-left: 0;
+    position: relative;
+    z-index: 10;
+}
+
+@media (max-width: 767px) {
+    .homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox .side-bg3 {
+        object-fit: contain !important;
+    }
+}
+
+/* ===================================================
+   PROJECT CARDS — Professional Dark Theme
+   =================================================== */
+.proj-card {
+    background: rgba(13, 26, 15, 0.85);
+    border: 1px solid rgba(67, 233, 123, 0.15);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.proj-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(67, 233, 123, 0.4);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.6), 0 0 24px rgba(67,233,123,0.12);
+}
+
+/* Image area */
+.proj-img-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.proj-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-bottom: 2px solid rgba(67, 233, 123, 0.2);
+}
+
+.proj-card:hover .proj-img-wrap img {
+    transform: scale(1.08);
+}
+
+/* Hover overlay with GitHub button */
+.proj-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.proj-card:hover .proj-img-overlay {
+    opacity: 1;
+}
+
+.proj-view-btn {
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+    color: #0a1a0d !important;
+    font-weight: 700;
+    font-size: 0.88rem;
+    padding: 10px 22px;
+    border-radius: 30px;
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.3px;
+    transition: transform 0.2s ease;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: unset !important;
+    background-clip: unset !important;
+}
+
+.proj-view-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Card body */
+.proj-body {
+    padding: 20px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.proj-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.proj-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #43e97b;
+    background: rgba(67, 233, 123, 0.1);
+    border: 1px solid rgba(67, 233, 123, 0.25);
+    border-radius: 20px;
+    padding: 3px 10px;
+    letter-spacing: 0.3px;
+}
+
+.proj-title {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.proj-desc {
+    color: #90a4ae;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    flex: 1;
+    margin-bottom: 14px;
+}
+
+.proj-desc strong {
+    color: #ffffff;
+}
+
+.proj-metrics {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(67, 233, 123, 0.12);
+    padding-top: 12px;
+}
+
+.proj-metrics span {
+    color: #43e97b;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* ===================================================
+   CERTIFICATION CARDS — Professional Dark Theme
+   =================================================== */
+.cert-card {
+    background: rgba(13, 26, 15, 0.85);
+    border: 1px solid rgba(67, 233, 123, 0.15);
+    border-top: 3px solid rgba(67, 233, 123, 0.4);
+    border-radius: 16px;
+    padding: 28px 24px 24px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.cert-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(67, 233, 123, 0.4), transparent);
+}
+
+.cert-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 40px rgba(0,0,0,0.6), 0 0 20px rgba(67,233,123,0.1);
+    border-color: rgba(67,233,123,0.35);
+}
+
+.cert-icon-wrap {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.cert-title {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.cert-issuer {
+    color: #78909c;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cert-desc {
+    color: #90a4ae;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    flex: 1;
+    margin-bottom: 18px;
+}
+
+.cert-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    padding-top: 14px;
+    margin-top: auto;
+}
+
+.cert-badge {
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid;
+    letter-spacing: 0.3px;
+    background: transparent;
+}
+
+.cert-link-btn {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #43e97b !important;
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s ease, gap 0.2s ease;
+    -webkit-text-fill-color: unset !important;
+    background: none !important;
+    background-clip: unset !important;
+    -webkit-background-clip: unset !important;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+}
+
+.cert-link-btn:hover {
+    color: #38f9d7 !important;
+    gap: 9px;
+}
+
+/* Fix spacing above social links area on home page */
+.homepage1-body .header-section-area .header-textarea .header-pera-area .socila-links-area {
+    margin-top: 30px !important;
+}
