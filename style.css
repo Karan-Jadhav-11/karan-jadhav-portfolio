@@ -901,4 +901,24 @@ img.colored-icon {
     .homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox {
         height: 520px !important;
     }
-}
+}
+
+/* ===================================================
+   RESPONSIVE FIX — Large screens 1600px+
+   Prevent "SCIENTIST" from overlapping the hero image
+   =================================================== */
+@media only screen and (min-width: 1600px) {
+
+    .homepage1-body .header-section-area .header-textarea .pbmit-heading-subheading {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .homepage1-body .header-section-area .header-textarea .pbmit-heading-subheading span.marketer {
+        /* Align to the right side of the heading row — keeps it out of the image column */
+        position: relative !important;
+        right: auto !important;
+        align-self: flex-end !important;
+        margin-top: 16px !important;
+    }
+}
