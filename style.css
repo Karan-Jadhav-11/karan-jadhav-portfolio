@@ -1,4 +1,4 @@
-/* Portfolio stylesheet v2 - updated 2026-07-23 */
+/* Portfolio stylesheet v3 - updated 2026-09-10 */
 @keyframes gradientShift {
     0% {
         background-position: 0% 50%;
@@ -705,12 +705,32 @@ img.colored-icon {
 }
 
 /* ===================================================
+   HERO HEADING — "SCIENTIST" MARKETER BOX
+   Use flex-column so positioning is flow-based and
+   identical on ALL browsers and GitHub Pages.
+   No fragile right: Npx offsets needed.
+   =================================================== */
+
+/* Make the heading a flex column at ALL screen sizes */
+.homepage1-body .header-section-area .header-textarea .pbmit-heading-subheading {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+}
+
+/* "SCIENTIST" box: always flows below the h1, aligned to the RIGHT of its column */
+.homepage1-body .header-section-area .header-textarea .pbmit-heading-subheading span.marketer {
+    position: relative !important;
+    right: auto !important;       /* kill the pixel-based right offset from main.css */
+    align-self: flex-end !important; /* pushes it to the right edge of the heading column */
+    margin-top: 10px !important;
+}
+
+/* ===================================================
    RESPONSIVE FIX — Small Laptops (992px – 1199px)
-   Prevents content overlap on smaller laptop screens
    =================================================== */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
 
-    /* Sidebar: reduce width and reposition to avoid eating into content */
     .homepage1-body .header-section-area .sidebar-main .sidebar-area {
         left: 10px !important;
         width: 180px !important;
@@ -730,7 +750,6 @@ img.colored-icon {
         padding: 10px 12px !important;
     }
 
-    /* Hero heading: scale down font sizes */
     .homepage1-body .header-section-area .header-textarea .pbmit-heading-subheading h1 {
         font-size: 36px !important;
         line-height: 40px !important;
@@ -741,16 +760,13 @@ img.colored-icon {
         line-height: 40px !important;
     }
 
-    /* "SCIENTIST" box: pull it back from the extreme right */
     .homepage1-body .header-section-area .header-textarea .pbmit-heading-subheading span.marketer {
-        right: 0 !important;
         font-size: 36px !important;
         line-height: 40px !important;
         padding: 16px 20px !important;
         margin-top: 10px !important;
     }
 
-    /* Hero image container: reduce negative offset */
     .homepage1-body .header-section-area .pbmit-animation-style3 {
         top: -80px !important;
         left: -20px !important;
@@ -760,7 +776,6 @@ img.colored-icon {
         height: 400px !important;
     }
 
-    /* Hero portrait: scale down */
     .homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox .side-bg3 {
         width: 80% !important;
         height: 90% !important;
@@ -776,7 +791,6 @@ img.colored-icon {
         max-width: 90% !important;
     }
 
-    /* Text area: reduce spacing */
     .homepage1-body .header-section-area .header-textarea .header-pera-area {
         margin-top: 20px !important;
     }
@@ -786,7 +800,6 @@ img.colored-icon {
         line-height: 24px !important;
     }
 
-    /* Social links: reset left offset */
     .homepage1-body .header-section-area .header-textarea .header-pera-area .socila-links-area {
         margin-top: 20px !important;
         left: 0 !important;
@@ -800,14 +813,12 @@ img.colored-icon {
         margin: 16px 8px 0 0 !important;
     }
 
-    /* H4 greeting text */
     .homepage1-body .header-section-area .header-textarea .pbmit-heading-subheading h4 {
         font-size: 18px !important;
         line-height: 18px !important;
         margin-bottom: 16px !important;
     }
 
-    /* Download CV button */
     .btn-area .download-btn {
         padding: 12px 18px !important;
         font-size: 14px !important;
@@ -817,11 +828,9 @@ img.colored-icon {
 
 /* ===================================================
    RESPONSIVE FIX — Medium Laptops (1200px – 1399px)
-   Moderate scaling to prevent partial overlap
    =================================================== */
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
 
-    /* Sidebar: shift closer to left edge */
     .homepage1-body .header-section-area .sidebar-main .sidebar-area {
         left: 20px !important;
         width: 210px !important;
@@ -836,7 +845,6 @@ img.colored-icon {
         margin-top: 70px !important;
     }
 
-    /* Hero heading: slightly smaller */
     .homepage1-body .header-section-area .header-textarea .pbmit-heading-subheading h1 {
         font-size: 48px !important;
         line-height: 52px !important;
@@ -847,16 +855,13 @@ img.colored-icon {
         line-height: 52px !important;
     }
 
-    /* "SCIENTIST" box: reduce offset significantly */
     .homepage1-body .header-section-area .header-textarea .pbmit-heading-subheading span.marketer {
-        right: 100px !important;
         font-size: 48px !important;
         line-height: 52px !important;
         padding: 18px 24px !important;
         margin-top: 16px !important;
     }
 
-    /* Hero image container */
     .homepage1-body .header-section-area .pbmit-animation-style3 {
         top: -120px !important;
         left: -30px !important;
@@ -866,7 +871,6 @@ img.colored-icon {
         height: 480px !important;
     }
 
-    /* Text area spacing */
     .homepage1-body .header-section-area .header-textarea .header-pera-area {
         margin-top: 30px !important;
     }
@@ -876,7 +880,6 @@ img.colored-icon {
         line-height: 27px !important;
     }
 
-    /* Social links */
     .homepage1-body .header-section-area .header-textarea .header-pera-area .socila-links-area {
         margin-top: 25px !important;
         left: -30px !important;
@@ -884,13 +887,11 @@ img.colored-icon {
 }
 
 /* ===================================================
-   RESPONSIVE FIX — Smaller range 1400px – 1599px
-   Fine-tune the "SCIENTIST" offset at this range
+   RESPONSIVE FIX — 1400px – 1599px
    =================================================== */
 @media only screen and (min-width: 1400px) and (max-width: 1599px) {
 
     .homepage1-body .header-section-area .header-textarea .pbmit-heading-subheading span.marketer {
-        right: 200px !important;
         font-size: 56px !important;
         line-height: 56px !important;
     }
@@ -901,25 +902,5 @@ img.colored-icon {
 
     .homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox {
         height: 520px !important;
-    }
-}
-
-/* ===================================================
-   RESPONSIVE FIX — Large screens 1600px+
-   Prevent "SCIENTIST" from overlapping the hero image
-   =================================================== */
-@media only screen and (min-width: 1600px) {
-
-    .homepage1-body .header-section-area .header-textarea .pbmit-heading-subheading {
-        display: flex !important;
-        flex-direction: column !important;
-    }
-
-    .homepage1-body .header-section-area .header-textarea .pbmit-heading-subheading span.marketer {
-        /* Align to the right side of the heading row — keeps it out of the image column */
-        position: relative !important;
-        right: auto !important;
-        align-self: flex-end !important;
-        margin-top: 16px !important;
     }
 }
