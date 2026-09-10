@@ -407,42 +407,39 @@ img.colored-icon {
     color: #000;
 }
 
-/* Hero Image - Proper positioning within circular frame */
+/* ===================================================
+   HERO IMAGE — Stable cross-environment positioning
+   Anchors the portrait to the green ring (side-bg1)
+   so it renders identically on local + GitHub Pages
+   =================================================== */
+
+/* Allow the circular ring & portrait to overflow the container
+   so overflow:hidden doesn't clip differently per environment */
+.homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox {
+    overflow: visible !important;
+}
+
+/* Portrait: sit on top of the green ring, centered */
 .homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox .side-bg3 {
     position: absolute !important;
-    top: 41% !important;
-    left: 51% !important;
-    transform: translate(-55%, -38%) !important;
-    width: 92% !important;
-    height: 99% !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -42%) !important;
+    width: 88% !important;
+    height: auto !important;
     object-fit: cover !important;
     object-position: center top !important;
     border-radius: 50% !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-/* Ensure the container doesn't overflow */
-.pbmit-animation-style3 {
-    position: relative;
-    width: 100%;
-}
-
-.progress-one_leftbox {
-    position: relative;
-    overflow: hidden;
-    max-width: 100%;
-}
-
-/* Prevent text overlap */
-.header-pera-area {
-    padding-left: 0;
-    position: relative;
-    z-index: 10;
+    z-index: 3 !important;
 }
 
 @media (max-width: 767px) {
     .homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox .side-bg3 {
         object-fit: contain !important;
+        width: 100% !important;
+        height: auto !important;
+        transform: translate(-50%, -42%) !important;
     }
 }
 
