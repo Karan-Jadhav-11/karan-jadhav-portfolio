@@ -408,38 +408,41 @@ img.colored-icon {
 }
 
 /* ===================================================
-   HERO IMAGE — Stable cross-environment positioning
-   Anchors the portrait to the green ring (side-bg1)
-   so it renders identically on local + GitHub Pages
+   HERO IMAGE — Clean portrait, no oval/ring decorations
    =================================================== */
 
-/* Allow the circular ring & portrait to overflow the container
-   so overflow:hidden doesn't clip differently per environment */
-.homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox {
-    overflow: visible !important;
+/* Hide the green oval ring (side-bg1) and diagonal slash (side-bg2) */
+.homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox .side-bg1,
+.homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox .side-bg2 {
+    display: none !important;
 }
 
-/* Portrait: sit on top of the green ring, centered */
+/* Show only the portrait image, clean and natural */
+.homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox {
+    overflow: visible !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
 .homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox .side-bg3 {
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -42%) !important;
-    width: 88% !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: 100% !important;
     height: auto !important;
-    object-fit: cover !important;
-    object-position: center top !important;
-    border-radius: 50% !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 420px !important;
+    object-fit: contain !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
     z-index: 3 !important;
+    display: block !important;
 }
 
 @media (max-width: 767px) {
     .homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox .side-bg3 {
-        object-fit: contain !important;
-        width: 100% !important;
-        height: auto !important;
-        transform: translate(-50%, -42%) !important;
+        max-width: 280px !important;
     }
 }
 
