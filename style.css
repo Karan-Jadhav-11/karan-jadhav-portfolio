@@ -408,41 +408,60 @@ img.colored-icon {
 }
 
 /* ===================================================
-   HERO IMAGE — Clean portrait, no oval/ring decorations
+   HERO IMAGE — Circular portrait with green CSS ring
+   Reliable on ALL environments (no image-based ring)
    =================================================== */
 
-/* Hide the green oval ring (side-bg1) and diagonal slash (side-bg2) */
+/* Hide all decorative elements: slash, old ring, corner grids */
 .homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox .side-bg1,
-.homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox .side-bg2 {
+.homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox .side-bg2,
+.homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox .elements3 {
     display: none !important;
 }
 
-/* Show only the portrait image, clean and natural */
+/* The container BECOMES the green circular ring */
 .homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox {
-    overflow: visible !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    position: relative !important;
+    width: 380px !important;
+    height: 380px !important;
+    border-radius: 50% !important;
+    border: 3px solid #43e97b !important;
+    box-shadow:
+        0 0 0 6px rgba(67, 233, 123, 0.12),
+        0 0 30px rgba(67, 233, 123, 0.35) !important;
+    overflow: hidden !important;
+    margin: 60px auto 0 auto !important;
+    background: transparent !important;
 }
 
+/* Portrait: fills the circle perfectly */
 .homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox .side-bg3 {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
     width: 100% !important;
-    height: auto !important;
-    max-width: 420px !important;
-    object-fit: contain !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    z-index: 3 !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    border-radius: 50% !important;
+    transform: none !important;
     display: block !important;
+    z-index: 2 !important;
+}
+
+@media (max-width: 991px) {
+    .homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox {
+        width: 280px !important;
+        height: 280px !important;
+        margin: 30px auto !important;
+    }
 }
 
 @media (max-width: 767px) {
-    .homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox .side-bg3 {
-        max-width: 280px !important;
+    .homepage1-body .header-section-area .pbmit-animation-style3 .progress-one_leftbox {
+        width: 240px !important;
+        height: 240px !important;
+        margin: 20px auto !important;
     }
 }
 
